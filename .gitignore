@@ -3,3 +3,5 @@ i7z
 
 build
 cmake-*
+.cache
+.idea
