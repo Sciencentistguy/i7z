@@ -244,8 +244,8 @@ uint64_t get_msr_value(int cpu, uint32_t reg, unsigned int highbit, unsigned int
     }
 
     if (pread(fd, &data, sizeof data, reg) != sizeof data) {
-        perror("rdmsr:pread");
-        exit(127);
+        //        perror("rdmsr:pread");
+        /*exit(127);*/
     }
 
     close(fd);
@@ -281,14 +281,14 @@ uint64_t set_msr_value(int cpu, uint32_t reg, uint64_t data) {
             fprintf(stderr, "wrmsr: CPU %d doesn't support MSRs\n", cpu);
             exit(3);
         } else {
-            perror("wrmsr:open");
-            exit(127);
+            //            perror("wrmsr:open");
+            //            exit(127);
         }
     }
 
     if (pwrite(fd, &data, sizeof data, reg) != sizeof data) {
-        perror("wrmsr:pwrite");
-        exit(127);
+        //        perror("wrmsr:pwrite");
+        //        exit(127);
     }
     close(fd);
     return (1);
@@ -341,7 +341,7 @@ void Print_Information_Processor(bool* nehalem, bool* sandy_bridge, bool* ivy_br
         printf("i7z DEBUG: Found Intel Processor\n");
     } else {
         printf("this was designed to be an intel proc utility. You can perhaps mod it for your machine?\n");
-        exit(1);
+        /*exit (1);*/
     }
 
     get_familyinformation(&proc_info);

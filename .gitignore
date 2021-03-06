@@ -5,3 +5,8 @@ build
 cmake-*
 .cache
 .idea
+
+
+# Added by cargo
+
+/target

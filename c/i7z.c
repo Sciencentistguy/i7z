@@ -270,14 +270,15 @@ int main(int argc, char** argv) {
         }
     }
 
-    Print_Version_Information();
+    /*Print_Version_Information();*/
 
-    Print_Information_Processor (&prog_options.i7_version.nehalem, &prog_options.i7_version.sandy_bridge, &prog_options.i7_version.ivy_bridge, &prog_options.i7_version.haswell);
+    /*Print_Information_Processor(&prog_options.i7_version.nehalem, &prog_options.i7_version.sandy_bridge, &prog_options.i7_version.ivy_bridge,*/
+    /*&prog_options.i7_version.haswell);*/
 
-//	printf("nehalem %d, sandy brdige %d\n", prog_options.i7_version.nehalem, prog_options.i7_version.sandy_bridge);
+    //	printf("nehalem %d, sandy brdige %d\n", prog_options.i7_version.nehalem, prog_options.i7_version.sandy_bridge);
 
-    Test_Or_Make_MSR_DEVICE_FILES ();
-    modprobing_msr();
+    /*Test_Or_Make_MSR_DEVICE_FILES();*/
+    /*modprobing_msr();*/
 
     /*
     prog_options.logging = 0;
